@@ -8,15 +8,10 @@ mach init mygame
 ```
 2. You can choose one of the two methods to add `mach-raylib` and run `mach dep pull`
    1. `mach dep add raylib --git` https://github.com/Angluca/mach-raylib  
-      `mach dep add std --git` https://github.com/briar-systems/mach-std
    2.  Or write it to `mach.toml`
 ```toml
 [dep.raylib]
 git = "https://github.com/angluca/mach-raylib"
-ref = "branch/main"
-
-[dep.std]
-git = "https://github.com/briar-systems/mach-std"
 ref = "branch/main"
 ```
 3. write `main.mach`
