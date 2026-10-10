@@ -1,5 +1,5 @@
 # mach-raylib ![Mach](https://img.shields.io/badge/language-Mach-orange)
-Mach language bindings for [Raylib](https://github.com/raysan5/raylib)
+[Mach](https://github.com/briar-systems/mach) bindings for [Raylib](https://github.com/raysan5/raylib)
 
 # How to use
 1. Create new project
