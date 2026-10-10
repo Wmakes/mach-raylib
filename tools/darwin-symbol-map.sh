@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# derive the symbol -> library attribution for the vendored GLFW archive.
+# derive the symbol -> library attribution for the vendored lib archive.
 #   tools/darwin-symbol-map.sh <archive>      writes TOML to stdout
 #
 # a two-level-namespace darwin target requires every dynamic import to name the

@@ -39,16 +39,7 @@ link = [
     "IOKit", "CoreFoundation", "CoreVideo", "OpenGL",
     "QuartzCore", "Metal"
 ]
-
 need = []
-
-[link.kernel32]
-source = "system"
-name = "kernel32.dll"
-os = ["windows"]
-isa = ["*"]
-abi = ["*"]
-export = true
 
 [profile.debug]
 default = true
@@ -73,7 +64,6 @@ ref = "branch/main"
 source = "system"
 #name = "libs/libraylib.a"
 name = "raylib" # mach build . -L lib_path
-#library = "raylib"
 os = ["linux", "windows", "darwin"]
 isa = "*"
 abi = "*"
@@ -88,10 +78,17 @@ export = true
 #abi = "*"
 #export = true
 
+[link.kernel32]
+source = "system"
+name = "kernel32.dll"
+os = ["windows"]
+isa = ["*"]
+abi = ["*"]
+export = true
+
 [link.libSystem]
 source = "system"
 name = "/usr/lib/libSystem.B.dylib"
-library = "libSystem"
 symbols = [
     "ma_atomic_global_lock",
     "_NSGetExecutablePath", "_NSGetProgname", "___chkstk_darwin", 
@@ -134,7 +131,6 @@ export = true
 [link.objc]
 source = "system"
 name = "/usr/lib/libobjc.A.dylib"
-library = "objc"
 symbols = [
     "OBJC_CLASS_$_NSObject", "OBJC_METACLASS_$_NSObject", 
     "_objc_empty_cache", "objc_alloc", "objc_alloc_init", 
